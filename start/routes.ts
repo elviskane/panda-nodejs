@@ -19,7 +19,11 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
-
+import customerRoutes from './api/customers/customers'
+import riderRoutes from './api/riders/riders'
 Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
+
+customerRoutes()
+riderRoutes()
